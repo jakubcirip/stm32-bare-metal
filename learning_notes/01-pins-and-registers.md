@@ -7,6 +7,7 @@ On STM32, all peripherals (including GPIO ports) are disconnected fro the clock 
 Where it is located: In the RCC (Reset and Clock Control) registers, specifically in the RCC_AHB1ENR register (for GPIO ports)
 Example in C:
 ```RCC->AHB1ENR |= (1 << 0); // Clock enable for Port A (bit 0 - GPIOAEN)```
+
 ```RCC->AHB1ENR |= (1 << 1); // Enable clock for Port B (bit 1 - GPIOBEN)```
 
 ## 2. How registers are defined in code (CMSIS)
@@ -47,7 +48,7 @@ Write: GPIOB->ODR |= 0x10; (Sets bit 4 to logical 1)
   - Writing 1 to the lower 16 bits sets the pin (Set to log. 1)
   - Writing 1 to the upper 16 bits resets the pin (Reset to log. 0)
 
-##5. Configuring alternative functions (AF)
+## 5. Configuring alternative functions (AF)
 If you use the pin for an internal peripheral (e.g. USART2 on pins PA2/PA3 on the Nucleo board):
 - Set MODER for the given pin to mode 10 (Alternate Function)
 
