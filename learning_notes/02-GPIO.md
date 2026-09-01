@@ -19,3 +19,14 @@ The individual ports correspond to specific bits in RCC_AHB1ENR:
 Example in C: \
 ```RCC->AHB1ENR |= (1U<<0); // Enable clock for GPIOA (bit 0) [9]``` \
 ```RCC->AHB1ENR |= (1U<<2); // Enable clock for GPIOC (bit 2) [10]```
+
+## 2. Boundary Addresses
+If we access the registers directly (bare-metal access), the base addresses of individual ports in memory are as follows:
+- GPIOA: 0x4002 0000
+- GPIOB: 0x4002 0400
+- GPIOC: 0x4002 0800
+- GPIOD: 0x4002 0C00
+- GPIOE: 0x4002 1000
+- GPIOH: 0x4002 1C00
+
+These addresses are mapped in the CMSIS libraries using the **GPIO_TypeDef** structure based on pointers.
