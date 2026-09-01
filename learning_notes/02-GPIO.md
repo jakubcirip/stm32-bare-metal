@@ -18,8 +18,6 @@ The individual ports correspond to specific bits in RCC_AHB1ENR:
 - Bit 4 (GPIOEEN): Port E
 - Bit 7 (GPIOHEN): Port H
 
-Example in C:
-
-```RCC->AHB1ENR |= (1U<<0); // Enable clock for GPIOA (bit 0) [9]```
-
+Example in C: \
+```RCC->AHB1ENR |= (1U<<0); // Enable clock for GPIOA (bit 0) [9]``` \
 ```RCC->AHB1ENR |= (1U<<2); // Enable clock for GPIOC (bit 2) [10]```
