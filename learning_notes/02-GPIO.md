@@ -1,6 +1,6 @@
 # GPIO Overview for STM32F411xx
 
-**STM32F411xx microcontrollers have ports GPIOA, GPIOB, GPIOC, GPIOD, GPIOE and GPIOH \n
+**STM32F411xx microcontrollers have ports GPIOA, GPIOB, GPIOC, GPIOD, GPIOE and GPIOH.
 Each of these ports can independently control up to 16 physical pins**
 
 ## 1. GPIO Clock Enable
